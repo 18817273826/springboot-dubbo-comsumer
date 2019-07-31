@@ -1,0 +1,14 @@
+server:
+  port: 8081
+
+dubbo:
+  application:
+  ##### 注册服务的名称
+    name: order
+  ##### 注册中心地址
+  registry:
+    address: zookeeper://10.0.20.121:2181?backup=10.0.20.131:2181,10.0.20.132:2181,10.0.20.133:2181
+  ##### 调用服务超时时间
+  consumer:
+    timeout: 5000
+    check: false
